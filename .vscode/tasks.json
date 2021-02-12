@@ -1,0 +1,16 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "start",
+			"problemMatcher": [],
+			"label": "npm: start",
+			"detail": "env-cmd -f server/.env concurrently \"npm run start-server\" \"npm run start-front\" --kill-others --kill-others-on-fail",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}

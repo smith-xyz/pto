@@ -1,0 +1,464 @@
+:root {
+    --primary-background: #161c24;
+    --secondary-background: #323d4d;
+    --create-btn: #65bf7d;
+    --edit-btn: #2fc2baf5;
+    --delete-btn: #ed5c5c;
+    --nudge-btn: #ffa620;
+    --white-btn: #fdfdfd;
+    --note-btn: rgb(255, 255, 45);
+}
+
+body {
+    color: white !important;
+    background-color: var(--primary-background) !important; 
+}
+
+/* Utilities */
+.app-spacing-utility-1 {
+    padding: 2rem 4rem;
+    margin: 2rem 6rem;
+    align-items: center;
+}
+
+.app-spacing-utility-2 {
+    width: 50%;
+    padding: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 20rem;
+    margin-right: 20rem;
+    align-items: center;
+}
+
+.app-spacing-utility-3 {
+    margin: 0.25rem;
+}
+
+/* requests containers and tables */
+.requests-container {
+    justify-content: center;
+    align-items: center;
+    width: 75rem;
+    max-width: 100%;
+    margin: auto;
+}
+
+.requests-button-group { 
+    margin-top: 1rem;
+}
+
+.request-form-container {
+    background-color: rgba(255, 255, 255, 0.082);
+    margin: auto;
+    transition: 0.4s;
+    border-radius: 1rem;
+}
+
+.tables-container {
+    background-color: rgba(255, 255, 255, 0.082);
+    border-radius: 0.25rem;
+}
+
+.nonapproved-requests-container {
+    position: relative;
+    padding-top: 0.25rem;
+    margin: 0.25rem;
+}
+
+.approved-requests-container {
+    margin: 0.25rem;    
+}
+
+/* filters - these could use some work */
+.filter-container-1 {
+    display: flex;
+    align-items: center;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: auto;
+}
+
+.filter-container-2 {
+    display: flex;
+    align-items: center;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    float: right;
+    width: 33.5rem;
+}
+
+
+.filter-container-3 {
+    display: flex;
+    align-items: center;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    float: right;
+    width: 20.5rem;
+}
+
+/* calendar design */
+.calendar-container {
+    padding: 1rem 1rem;
+    align-items: center;
+    position: relative;
+    height: 55rem;
+    max-width: 100%;
+    background-color: rgba(255, 255, 255, 0.082);
+}
+
+.calendar-view-container {
+    height: 45rem;
+    width: 67rem;
+    border-style: ridge;
+    border-color: rgba(87, 236, 236, 0.575);
+    background-color: rgba(87, 236, 236, 0.575);
+    border-radius: 1em;
+    margin-left: 20.5rem;
+    padding-right: 1em;
+    position: absolute;
+}
+
+.calendar {
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+.upcoming-list-container {
+    height: 45rem;
+    width: 20rem;
+    display: inline-block;
+    position: absolute;
+    border-style: ridge;
+    border-color: rgba(87, 236, 236, 0.575);
+    border-radius: 1em;
+    background-color: rgba(87, 236, 236, 0.575);
+}
+
+.header-formatter-1 {
+    position: relative;
+    margin-left: 1em;
+    padding-top: 0.25em;
+}
+
+.header-style-1 {
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  [class*="app-spacing-utility-"] {
+    width: 100%;
+  }
+}
+
+/* custom buttons */
+.btn-custom-1 {
+    font-family: Arial, Helvetica, sans-serif ;
+    font-weight: 400 ;
+    border-bottom-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+    margin: 0.25em;
+}
+
+.btn-custom-2 {
+    font-family: Arial, Helvetica, sans-serif ;
+    font-weight: 400 ;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+    margin: 0.25em;
+}
+
+.btn-custom-3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+    margin: 0.25em;
+}
+
+.btn-custom-4 {
+    font-family: Arial, Helvetica, sans-serif ;
+    font-weight: 400 ;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+    margin: 0.25em;
+    width: 6rem;
+    border-radius: 8px;
+}
+
+.btn-custom-1:hover {
+    transform: translateY(-3px) ;
+}
+
+.btn-custom-2:hover {
+    transform: translateY(-3px) ;
+}
+
+.btn-custom-4:hover {
+    transform: translateY(-3px) ;
+}
+
+.btn--create--solid {
+    background-color: var(--create-btn) ;
+    color: var(--white) ;
+    border: none;
+}
+
+.btn--edit--solid {
+    background-color: var(--edit-btn) ;
+    color: var(--white) ;
+    border: none;
+}
+
+.btn--delete--solid {
+    background-color: var(--delete-btn) ;
+    color: var(--white) ;
+    border: none;
+}
+
+.btn--nudge--solid {
+    background-color: var(--nudge-btn) ;
+    color: var(--white) ;
+    border: none;
+}
+
+.btn--note--solid {
+    background-color: var(--note-btn);
+    color: black;
+    border: none;
+}
+
+.btn--medium {
+    padding: 10px 20px ;
+    font-size: 18px ;
+}
+
+.btn--small {
+    padding: 0.25rem 0.5rem ;
+    font-size: 1rem ;
+}
+
+.button-icon-spacing {
+    margin-right: 0.25rem;
+    margin-left: 0.25rem
+}
+
+/* tooltip */
+.tooltip-container-1 {
+    position: absolute;
+}
+
+/*Custom Form Modal*/
+.custom-modal {
+    position: fixed;
+    z-index: 1100;
+    background-color: rgba(255, 255, 255, 0.863);
+    width: 70%;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px black;
+    padding: 16px;
+    left: 15%;
+    top: 30%;
+    box-sizing: border-box;
+    transition: all 0.20s ease-out;
+    border-radius: 1.2em
+}
+
+@media (min-width: 600px) {
+    .custom-modal {
+        width: 500px;
+        left: calc(50% - 250px);
+    }
+}
+
+.custom-backdrop-modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 500;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+
+/* handle tooltip overlay behavior */
+.tooltip{
+    z-index: 200 !important;
+  }
+
+/* Login */
+.login-container {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    margin-top: 10rem;
+    background: rgba(109, 119, 129, 0.651);
+    height: 22rem;
+    width: 30rem;
+    border-radius: 0.75em
+}
+
+.login-form-container {
+    width: auto;
+    margin: 1rem;
+    align-items: center;
+    position: relative;
+}
+
+.login-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+
+.login-assistance-container {
+    display: flex;
+    margin: auto;
+    display: grid;
+}
+
+.login-assistance-item {
+    display: flex;
+    color: lightsteelblue;
+    margin-top: 0.25rem;
+    margin-left: 1rem;
+}
+
+.login-assistance-item:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.login-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    margin: auto;
+    padding-right: 1.25em;
+}
+
+/* registration form */
+.registration-form-container {
+    background-color: rgba(255, 255, 255, 0.082);
+    padding: 1rem;
+    border-radius: 0.25rem;
+    position: absolute;
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin-top: 6rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.registration-form-header-container {
+    margin-bottom: 0.5rem;
+    border: solid;
+    border-width: 1px;
+    border-radius: 0.5rem;
+    border-color: lightsteelblue;
+}
+
+.registration-form-header-text {
+    text-align: center;
+    padding: 0.25rem;
+}
+
+.registration-form {
+    position: relative;
+    width: 50rem;
+    max-width: 100%;
+}
+
+/* divider */
+.divider-container {
+    margin-top: 0.25rem;
+}
+
+.divider-title-text {
+    color: rgb(148, 159, 170);
+}
+
+.divider-line {
+    border-top: 1px dashed rgba(109, 119, 129, 0.651);
+    border-radius: 5px;
+}
+
+/* page not found */
+.page-not-found-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 5rem;
+}
+
+/* animated ellipsis */
+.animated-ellipsis {
+    font-size: 30px;
+}
+
+.animated-ellipsis:after {
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
+    -webkit-animation: ellipsis steps(4,end) 900ms infinite;      
+    animation: ellipsis steps(4,end) 900ms infinite;
+    content: "\2026"; /* ascii code for the ellipsis character */
+    width: 0px;
+}
+  
+@keyframes ellipsis {
+    to {
+        width: 1.25em;    
+    }
+}
+  
+@-webkit-keyframes ellipsis {
+    to {
+        width: 1.25em;    
+    }
+}
+
+  .custom-loading-spinner {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 17rem;
+    border: 0.9em solid rgba(0, 0, 0, 0.1);
+    border-top: 0.9em solid #2fc2baf5;
+    border-radius: 50%;
+    width: 8rem;
+    height: 8rem;
+    animation: spin 0.6s linear infinite;
+}
+
+  @keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

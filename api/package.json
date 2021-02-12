@@ -1,0 +1,33 @@
+{
+  "name": "pto-api",
+  "version": "1.0.0",
+  "description": "rest api for pto mgmt web app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "env-cmd -f ./.env.dev nodemon server.js --watch /app/*"
+  },
+  "author": "shaun smith",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^7.2.6",
+    "bcrypt": "^5.0.0",
+    "config": "^3.3.2",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-validator": "^6.6.1",
+    "helmet": "3.22.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.27.0",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.10.15"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "env-cmd": "^10.1.0",
+    "jest": "24.9.0",
+    "nodemon": "^2.0.6",
+    "superagent": "^6.1.0",
+    "supertest": "^4.0.2"
+  }
+}
